@@ -1,30 +1,55 @@
-4 #include <stdio.h>
-void main(){
-	unsigned long long  m,n,x,y,i,m1,n1;
-	scanf("%llu/%llu",&m,&n);
-	if (m%n == 0){
-		m1 = m/n;
-		printf("=");
-		printf(" %llu",m1);
-	}
-	else if (m>n){
-		x = m;
-		y = n;
-		while (x%y != 0){
-			i = y;
-			y = x%y;
-			x = i;
-		}
-	m1 = m/y;
-	n1 = n/y;
-	printf("=");
-	printf(" %llu",m1);
-	printf("/");
-	printf("%llu",n1);
+#include <stdio.h>
+int main(){
+	unsigned long long  m,n,x,y,i,m1,n1,gcd,lcm;
+	scanf("%llu %llu",&m,&n);
+	
+	
+	
+	 if ( m >= 0 && n >= 0 && m <= 1000000000 && n <= 1000000000 && m == n && m!= 0 && n != 0 ){
+    gcd = m;
+    lcm = (m*n)/gcd;
+    printf("GCD: %llu\n",gcd);
+    printf("LCM: %llu\n",lcm);
+  }
+	
+else if (m >= 0 && n >= 0 && m <= 1000000000 && n <= 1000000000 && m==0 && n== 0){
+}
+else if (m >= 0 && n >= 0 && m <= 1000000000 && n <= 1000000000  && n== 0){
+}
+else if ( m >= 0 && n >= 0 && m <= 1000000000 && n <= 1000000000 && m == 0 ){
+    gcd = n;
+    lcm = (m*n)/gcd;
+    printf("GCD: %llu\n",gcd);
+    printf("LCM: %llu\n",lcm);
+  }
+ else if ( m >= 0 && n >= 0 && m <= 1000000000 && n <= 1000000000 && m%n == 0 ){
+    gcd = n;
+    lcm = (m*n)/gcd;
+    printf("GCD: %llu\n",gcd);
+    printf("LCM: %llu\n",lcm);
+  }
 
-
-	}
-	else if(n>m){
+ else if (  m >= 0 && n >= 0 && m <= 1000000000 && n <= 1000000000 ){
+ 
+	
+//	else if (m>n){
+//		x = m;
+//		y = n;
+//		while (x%y != 0){
+//			i = y;
+//			y = x%y;
+//			x = i;
+//		}
+//		gcd = x;
+//	    lcm = (m*n)/gcd;
+//		printf("GCD: %llu\n",gcd);
+//		printf("LCM: %llu\n",lcm);
+//	
+//	
+//
+//
+//	}
+	
 		y = m;
 		x = n;
 		while (y%x != 0){
@@ -32,11 +57,11 @@ void main(){
 			x = y%x;
 			y = i;
 		}
-	m1 = m/x;
-	n1 = n/x;
-	printf("=");
-	printf(" %llu",m1);
-	printf("/");
-	printf("%llu",n1);
-	}
+	    gcd = x;
+	    lcm = (m*n)/gcd;
+		printf("GCD: %llu\n",gcd);
+		printf("LCM: %llu\n",lcm);
+	
+}
+
 }
