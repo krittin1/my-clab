@@ -1,0 +1,42 @@
+4 #include <stdio.h>
+void main(){
+	unsigned long long  m,n,x,y,i,m1,n1;
+	scanf("%llu/%llu",&m,&n);
+	if (m%n == 0){
+		m1 = m/n;
+		printf("=");
+		printf(" %llu",m1);
+	}
+	else if (m>n){
+		x = m;
+		y = n;
+		while (x%y != 0){
+			i = y;
+			y = x%y;
+			x = i;
+		}
+	m1 = m/y;
+	n1 = n/y;
+	printf("=");
+	printf(" %llu",m1);
+	printf("/");
+	printf("%llu",n1);
+
+
+	}
+	else if(n>m){
+		y = m;
+		x = n;
+		while (y%x != 0){
+			i = x;
+			x = y%x;
+			y = i;
+		}
+	m1 = m/x;
+	n1 = n/x;
+	printf("=");
+	printf(" %llu",m1);
+	printf("/");
+	printf("%llu",n1);
+	}
+}
