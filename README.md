@@ -1,3 +1,3 @@
 # my-clab
 
-Program for calculate GCD & LCM
+This reposotory stored some code.
